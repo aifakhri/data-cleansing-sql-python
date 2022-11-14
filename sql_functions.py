@@ -4,7 +4,7 @@ from sqlite3 import Error
 
 
 
-def open_connection():
+def open_connection(file_path):
     """
     This function is used to create connection to the database
 
@@ -14,7 +14,7 @@ def open_connection():
     """
     connection = None
     try:
-        connection = sqlite3.connect("olist.db")
+        connection = sqlite3.connect(file_path)
         print("Connection is successful")
         return connection
     except Error as e:
