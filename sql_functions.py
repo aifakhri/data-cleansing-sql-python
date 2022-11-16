@@ -6,11 +6,14 @@ from sqlite3 import Error
 
 def open_connection(file_path):
     """
-    This function is used to create connection to the database
+    This function is used to create connection to the database.
+
+    Argument:
+        - file_path: Describing the path to the SQLite file 
 
     Return Value:
-    connection object if the connection is establisehd
-    Otherwise None
+        - connection object if the connection is establisehd
+        - Otherwise None
     """
     connection = None
     try:
