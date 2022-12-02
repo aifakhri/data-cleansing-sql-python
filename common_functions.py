@@ -25,7 +25,8 @@ def open_connection(file_path):
 
 
 def translate_products(data):
-    """
+    """Extract the product translation
+    
     This function is for creating dictionary of original product name and
     product name in English.
 
