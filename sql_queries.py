@@ -33,6 +33,7 @@ LEFT JOIN order_reviews
 
 sellers_sold_items = """
 SELECT
+	order_item.order_id,
 	products.product_category_name AS product_name,
 	sellers.seller_id
 FROM olist_order_items_dataset AS order_item
