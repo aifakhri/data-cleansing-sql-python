@@ -5,6 +5,7 @@ SELECT
 	order_data.order_id,
 	reviews.review_id,
     order_items.seller_id,
+	order_items.order_item_id,
 	order_items.price,
 	reviews.review_score
 FROM olist_order_dataset AS order_data
@@ -16,6 +17,7 @@ LEFT JOIN olist_order_items_dataset AS order_items
 
 SELECT
 	order_information.order_id,
+	order_information.order_item_id,
 	sellers.seller_id,
 	products.product_category_name AS product_name,
 	order_information.price,
