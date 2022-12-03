@@ -1,20 +1,21 @@
 import sqlite3
-
 from sqlite3 import Error
 
 
-
 def open_connection(file_path):
-    """
-    This function is used to create connection to the database.
+    """Create connection to the database.
 
-    Argument:
-        - file_path: Describing the path to the SQLite file 
+    Parameters
+    ----------
+    file_path : str
+        Describing the path to the SQLite file
 
-    Return Value:
-        - connection object if the connection is establisehd
-        - Otherwise None
+    Returns
+    -------
+    connection : sqlite3.object
+        sqlit3 connection object
     """
+
     connection = None
     try:
         connection = sqlite3.connect(file_path)
