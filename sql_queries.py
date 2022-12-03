@@ -1,5 +1,5 @@
 main_query = """
-WITH order_information as (
+WITH order_information AS (
 SELECT
 	order_items.product_id,
 	order_data.order_id,
@@ -21,15 +21,9 @@ SELECT
 	order_information.price,
 	order_information.review_score
 FROM order_information
-LEFT JOIN olist_products_dataset as products 
+LEFT JOIN olist_products_dataset AS products 
 	ON order_information.product_id = products.product_id
-LEFT JOIN olist_sellers_dataset as sellers
+LEFT JOIN olist_sellers_dataset AS sellers
 	ON order_information.seller_id = sellers.seller_id
 ;
-"""
-
-translation_table = """
-SELECT
-	*
-FROM product_category_name_translation
 """
